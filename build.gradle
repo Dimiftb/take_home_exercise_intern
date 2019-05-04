@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'spring-boot'
 apply plugin: 'idea'
+apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenCentral()
@@ -21,7 +22,13 @@ configurations {
     runtimeLibs
 }
 
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
+}
+springBoot {
+    mainClass = "com.shutl.Application"
 }

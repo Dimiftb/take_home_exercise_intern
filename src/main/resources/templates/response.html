@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link type="text/css" rel="stylesheet" href="main.css"/>
+    <title>Quote</title>
+</head>
+<body>
+<p th:text="'A delivery from ' + ${quote.pickupPostcode} +  ' to ' + ${quote.deliveryPostcode} + ' using a ' + ${quote.vehicle } + ' will cost you £' + ${quote.price} + '.'"/>
+<a href="/">New Quote</a>
+</body>
+</html>
